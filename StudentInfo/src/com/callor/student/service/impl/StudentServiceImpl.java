@@ -32,7 +32,6 @@ public class StudentServiceImpl implements StudentService {
 			System.out.println("2. 학생정보 전체 보기");
 			System.out.print("메뉴를 선택해 주세요(QUIT : 종료) > ");
 			String select = scan.nextLine();
-
 			if (select.equals("1")) {
 				inputStudent();
 			} else if (select.equals("2")) {
@@ -66,7 +65,6 @@ public class StudentServiceImpl implements StudentService {
 					.intGrade(Integer.valueOf(stGrade)).stTel(stTel).build();
 			studentList.add(stVO);
 		} // end while
-
 		FileOutputStream fileOut = null;
 		BufferedOutputStream buffer = null;
 		try {
@@ -78,13 +76,11 @@ public class StudentServiceImpl implements StudentService {
 			buffer.flush();
 			buffer.close();
 			fileOut.close();
-
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
 	}// end inputStudent
 
 	@Override
@@ -108,7 +104,6 @@ public class StudentServiceImpl implements StudentService {
 		try {
 			fileReader = new FileReader(fileName);
 			buffer = new BufferedReader(fileReader);
-
 			while (true) {
 				String reader = buffer.readLine();
 				if (reader == null) {

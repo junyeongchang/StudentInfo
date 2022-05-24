@@ -17,7 +17,6 @@ public class StudentVO {
 	String stDept;
 	int intGrade;
 	String stTel;
-
 	@Override
 	public String toString() {
 		String result = "";
